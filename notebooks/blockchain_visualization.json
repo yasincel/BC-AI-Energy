@@ -1,0 +1,87 @@
+{
+  "cells": [
+    {
+      "cell_type": "code",
+      "execution_count": 1,
+      "metadata": {},
+      "outputs": [],
+      "source": [
+        "# Jupyter Notebook magic command to display plots inline\n",
+        "%matplotlib inline\n",
+        "\n",
+        "from BIMAIProject.src.blockchain_integration import Blockchain\n",
+        "\n",
+        "# Create a blockchain instance\n",
+        "blockchain = Blockchain()\n",
+        "\n",
+        "# Display the initial state of the blockchain\n",
+        "blockchain.chain\n"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": 2,
+      "metadata": {},
+      "outputs": [],
+      "source": [
+        "# Add new setpoints to the blockchain\n",
+        "electric_setpoint = 100.0  # Replace with the actual electric setpoint\n",
+        "boiler_setpoint = 70.0\n",
+        "ventilation_setpoint = 3.0\n",
+        "blockchain.add_setpoints(electric_setpoint, boiler_setpoint, ventilation_setpoint)\n",
+        "\n",
+        "# Display the updated state of the blockchain\n",
+        "blockchain.chain\n"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": 3,
+      "metadata": {},
+      "outputs": [],
+      "source": [
+        "# Add another block to the blockchain\n",
+        "new_block = blockchain.new_block(previous_hash=None)\n",
+        "\n",
+        "# Display the state of the blockchain after adding a new block\n",
+        "blockchain.chain\n"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": 4,
+      "metadata": {},
+      "outputs": [],
+      "source": [
+        "# Verify the integrity of the blockchain\n",
+        "blockchain_integrity = verify_blockchain_integrity(blockchain)\n",
+        "\n",
+        "if blockchain_integrity:\n",
+        "    print(\"Blockchain integrity is verified.\")\n",
+        "else:\n",
+        "    print(\"Issues with blockchain integrity.\")"
+      ]
+    }
+  ],
+  "metadata": {
+    "kernelspec": {
+      "display_name": "Python 3",
+      "language": "python",
+      "name": "python3"
+    },
+    "language_info": {
+      "codemirror_mode": {
+        "name": "ipython",
+        "version": 3
+      },
+      "file_extension": ".py",
+      "mimetype": "text/x-python",
+      "name": "python",
+      "nbconvert_exporter": "python",
+      "pygments_lexer": "ipython3",
+      "version": "3.9.6"
+    }
+  },
+  "nbformat": 4,
+  "nbformat_minor": 5
+}
