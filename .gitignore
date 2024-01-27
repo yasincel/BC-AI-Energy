@@ -1,0 +1,33 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Virtual Environment
+venv/
+env/
+env.bak/
+*.log
+
+# Jupyter Notebooks
+.ipynb_checkpoints/
+
+# Dataset
+BIMAIProject/data/raw_data.csv
+BIMAIProject/data/processed_data.csv
+
+# Trained Models
+BIMAIProject/models/linear_regression_model.joblib
+
+# User-specific files
+*.pyc
+*.pyo
+*.pyd
+*.db
+
+# Other
+.DS_Store
+.idea/
+*.sqlite3
+*.xlsx

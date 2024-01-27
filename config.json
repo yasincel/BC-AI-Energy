@@ -1,0 +1,14 @@
+{
+  "database": {
+    "host": "localhost",
+    "port": 5432,
+    "username": "user123",
+    "password": "secretpassword",
+    "database_name": "mydatabase"
+  },
+  "api_key": "your_api_key_here",
+  "other_settings": {
+    "setting1": true,
+    "setting2": "value"
+  }
+}
