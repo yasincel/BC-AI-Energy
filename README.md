@@ -28,7 +28,7 @@ The BIMAI project addresses the challenge of energy consumption prediction in bu
 1. Clone the repository:
 
     ```bash
-    git clone https://github.com/.../BIMAIProject.git
+    git clone https://github.com/yasincel/BC-AI-Energy.git
     ```
 
 2. Navigate to the project directory:
